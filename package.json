@@ -28,7 +28,18 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.2",
+    "prettier": "^3.5",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 100,
+    "bracketSpacing": false,
+    "singleQuote": true
+  },
+  "allowScripts": {
+    "unrs-resolver@1.12.2": true,
+    "esbuild@0.28.2": true
   }
 }
