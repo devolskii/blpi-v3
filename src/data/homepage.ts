@@ -15,15 +15,15 @@ export type Article = {
 }
 
 export const navLinks = [
-  {label: 'World', href: '#'},
-  {label: 'India', href: '#'},
-  {label: 'Analysis', href: '#'},
-  {label: 'Debate', href: '#'},
-  {label: 'Statement', href: '#'},
-  {label: 'Classics', href: '#'},
-  {label: 'PDF', href: '#'},
-  {label: 'Archive', href: '#'},
-  {label: 'All', href: '#', muted: true},
+  {label: 'world', href: '#'},
+  {label: 'india', href: '#'},
+  {label: 'analysis', href: '#'},
+  {label: 'debate', href: '#'},
+  {label: 'statement', href: '#'},
+  {label: 'classics', href: '#'},
+  {label: 'pdf', href: '#'},
+  {label: 'archive', href: '#'},
+  {label: 'all', href: '#', muted: true},
 ]
 
 export const shareActions = ['facebook', 'x', 'whatsapp', 'link', 'comments', 'bookmark'] as const

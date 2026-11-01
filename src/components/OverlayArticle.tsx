@@ -30,7 +30,7 @@ export default function OverlayArticle({
       <div
         className={`absolute inset-0 flex flex-col px-0 ${dark ? 'justify-center items-center text-center text-white' : 'items-start'}`}
       >
-        <h3 className={`font-dm-serif-display leading-[1.48] max-w-full ${titleClassName}`}>
+        <h3 className={`font-heading leading-[1.48] max-w-full ${titleClassName}`}>
           <Link href={href}>
             {dark ? (
               <Highlight className="bg-black/60">{title}</Highlight>
@@ -42,7 +42,7 @@ export default function OverlayArticle({
 
         {deck && (
           <p
-            className={`mt-4 px-2 font-ancizar text-[17px] leading-snug whitespace-pre-line max-w-full wrap-break-word ${dark ? 'text-white bg-black/60' : 'text-gray-600'}`}
+            className={`mt-4 px-2 font-serif text-[17px] leading-snug whitespace-pre-line max-w-full wrap-break-word ${dark ? 'text-white bg-black/60' : 'text-gray-600'}`}
           >
             {deck}
           </p>

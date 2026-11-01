@@ -19,9 +19,7 @@ export default function ArticleStrip({articles}: {articles: Article[]}) {
             {index > 0 && <Divider vertical className="hidden lg:block" />}
             <article className="h-100 flex flex-1 flex-col gap-2.5 overflow-hidden">
               <Img src={article.image} alt="" className="aspect-[794/568] w-full" />
-              <h3
-                className={`my-auto text-center font-dm-serif-display leading-tight ${titleSize}`}
-              >
+              <h3 className={`my-auto text-center font-heading leading-tight ${titleSize}`}>
                 <Link href={article.href}>{article.title}</Link>
               </h3>
             </article>

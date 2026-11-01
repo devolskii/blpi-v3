@@ -1,0 +1,24 @@
+{
+  "home": "/",
+  "nav": {
+    "world": "World",
+    "india": "India",
+    "analysis": "Analysis",
+    "debate": "Debate",
+    "statement": "Statement",
+    "classics": "Classics",
+    "pdf": "PDF",
+    "archive": "Archive",
+    "all": "All",
+    "sections": {
+      "frontpage": "Front Page",
+      "politics": "Politics",
+      "economics": "Economics",
+      "philosophy": "Philosophy",
+      "history": "History",
+      "videos": "Videos"
+    },
+    "latest": "Latest Edition",
+    "title": "International Path"
+  }
+}

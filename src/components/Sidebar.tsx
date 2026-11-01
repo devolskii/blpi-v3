@@ -20,7 +20,7 @@ export default function Sidebar({video, tabs, latest, quote, program, classic}: 
       </Link>
 
       <div>
-        <div className="grid grid-cols-3 gap-2.5 text-center font-dm-sans text-sm font-medium">
+        <div className="grid grid-cols-3 gap-2.5 text-center font-sans text-sm font-medium">
           {tabs.map((tab, index) => (
             <button
               key={tab}
@@ -34,7 +34,7 @@ export default function Sidebar({video, tabs, latest, quote, program, classic}: 
         <ul>
           {latest.map((item) => (
             <li key={item.href} className="flex items-start gap-2.5 px-[5px] py-2.5">
-              <Link href={item.href} className="flex-1 font-dm-serif-text text-[15px] leading-snug">
+              <Link href={item.href} className="flex-1 font-serif text-[15px] leading-snug">
                 {item.title}
               </Link>
               <Img src={item.image} alt="" className="aspect-[5/3] w-[101px] shrink-0" />
@@ -43,7 +43,7 @@ export default function Sidebar({video, tabs, latest, quote, program, classic}: 
         </ul>
       </div>
       <Divider className="my-3" />
-      <blockquote className="py-4 text-center font-ancizar italic">
+      <blockquote className="py-4 text-center font-serif italic">
         <p className="text-3xl leading-snug">{quote.text}</p>
         <footer className="mt-4 text-base text-[#4c4c4c]">
           <cite className="text-2xl">— {quote.attribution}</cite>
@@ -56,20 +56,20 @@ export default function Sidebar({video, tabs, latest, quote, program, classic}: 
       <Divider className="my-3" />
       <Link href={program.href} className="block overflow-hidden -mr-15">
         <Img src={program.image} alt="" className="w-full max-w-full !object-contain" />
-        <h3 className="mt-2 font-dm-serif-display text-3xl mr-15">{program.title}</h3>
+        <h3 className="mt-2 font-heading text-3xl mr-15">{program.title}</h3>
       </Link>
       <Divider className="my-3" />
 
       <article className="flex flex-col gap-2">
         <Img src={classic.image} alt="" className="aspect-[458/260] w-full" />
-        <p className="font-dm-sans text-xs">{classic.kicker}</p>
-        <h3 className="font-dm-serif-display text-[22px] leading-tight">
+        <p className="font-sans text-xs">{classic.kicker}</p>
+        <h3 className="font-heading text-[22px] leading-tight">
           <Link href={classic.href}>
             <Highlight className="!bg-transparent !p-0">{classic.title}</Highlight>
           </Link>
         </h3>
         <div className="flex flex-col gap-3">
-          <p className="font-ancizar text-xl italic leading-snug">{classic.deck}</p>
+          <p className="font-serif text-xl italic leading-snug">{classic.deck}</p>
           {classic.author && <Byline author={classic.author} date={classic.date} size="sm" />}
         </div>
       </article>

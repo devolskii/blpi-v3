@@ -11,7 +11,7 @@ export default function SplitFeatures({articles}: {articles: Article[]}) {
           className={`grid grid-cols-[1fr_1.4fr] items-center gap-4 ${index > 0 ? 'md:border-l md:border-[#b0aeae] md:pl-4' : 'md:pr-4'}`}
         >
           <Img src={article.image} alt="" className="aspect-[4/3] w-full" />
-          <h3 className="font-dm-serif-display text-[30px] leading-tight">
+          <h3 className="font-heading text-[30px] leading-tight">
             <Link href={article.href}>{article.title}</Link>
           </h3>
         </article>
