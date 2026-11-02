@@ -9,6 +9,7 @@ import {
 import './globals.css'
 import {NextIntlClientProvider} from 'next-intl'
 import {getMessages} from 'next-intl/server'
+import {SpeedInsights} from '@vercel/speed-insights/next'
 
 const enHeading = DM_Serif_Display({
   variable: '--font-en-heading',
@@ -68,6 +69,7 @@ export default async function RootLayout({children, params}: LayoutProps) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div className="fade-in">{children}</div>
         </NextIntlClientProvider>
+        <SpeedInsights />
       </body>
     </html>
   )
