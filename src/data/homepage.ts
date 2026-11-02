@@ -15,23 +15,23 @@ export type Article = {
 };
 
 export const navLinks = [
-  {label: 'world', href: '#'},
-  {label: 'india', href: '#'},
-  {label: 'analysis', href: '#'},
-  {label: 'debate', href: '#'},
-  {label: 'statement', href: '#'},
-  {label: 'classics', href: '#'},
-  {label: 'pdf', href: '#'},
-  {label: 'archive', href: '#'},
-  {label: 'all', href: '#', muted: true},
+  { label: 'world', href: '#' },
+  { label: 'india', href: '#' },
+  { label: 'analysis', href: '#' },
+  { label: 'debate', href: '#' },
+  { label: 'statement', href: '#' },
+  { label: 'classics', href: '#' },
+  { label: 'pdf', href: '#' },
+  { label: 'archive', href: '#' },
+  { label: 'all', href: '#', muted: true },
 ];
 
 export const shareActions = ['facebook', 'x', 'whatsapp', 'link', 'comments', 'bookmark'] as const;
 
 const authors = {
-  mohon: {name: 'Mohon Sharif', avatar: img('Mohon Sharif.png')},
-  bhaskar: {name: 'Bhaskar Ganguly', avatar: img('Bhaskar Ganguly.png')},
-  trotsky: {name: 'Leon Trotsky', avatar: img('Leon Trotsky.png')},
+  mohon: { name: 'Mohon Sharif', avatar: img('Mohon Sharif.png') },
+  bhaskar: { name: 'Bhaskar Ganguly', avatar: img('Bhaskar Ganguly.png') },
+  trotsky: { name: 'Leon Trotsky', avatar: img('Leon Trotsky.png') },
 } satisfies Record<string, Author>;
 
 export const leadStory = {
@@ -249,13 +249,13 @@ export const footer = {
       title: 'Downloads',
       links: ['Magazine', 'Pamphlet', 'Podcasts', 'Power', 'Reading', 'Meetings'],
     },
-    {title: 'FRONT PAGE', links: ['World', 'India', 'Analysis / Debate', 'Classics']},
-    {title: 'MARXIST CLASSICS', links: ['Marx and Engels', 'Lenin', 'Trotsky', 'Luxemburg']},
+    { title: 'FRONT PAGE', links: ['World', 'India', 'Analysis / Debate', 'Classics'] },
+    { title: 'MARXIST CLASSICS', links: ['Marx and Engels', 'Lenin', 'Trotsky', 'Luxemburg'] },
     {
       title: 'ARCHIVES & RESOURCES',
       links: ['Archives', 'Study Guides', 'Reading Lists', 'Audio / Video'],
     },
-    {title: 'ABOUT & CONTRIBUTIONS', links: ['About', 'Submit', 'Support', 'Translations']},
+    { title: 'ABOUT & CONTRIBUTIONS', links: ['About', 'Submit', 'Support', 'Translations'] },
   ],
   shareAndRead: {
     title: 'SHARE & READ',

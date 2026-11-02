@@ -9,7 +9,7 @@ type FeatureBannerProps = {
   image: string;
 };
 
-export default function FeatureBanner({title, href, deck, image}: FeatureBannerProps) {
+export default function FeatureBanner({ title, href, deck, image }: FeatureBannerProps) {
   return (
     <section className="relative aspect-[1620/1080] overflow-hidden">
       <Img src={image} alt={title} className="absolute inset-0 size-full" />

@@ -1,10 +1,10 @@
-import {Fragment} from 'react';
+import { Fragment } from 'react';
 import Link from 'next/link';
-import type {Article} from '@/data/homepage';
+import type { Article } from '@/data/homepage';
 import Divider from './ui/Divider';
 import Img from './ui/Img';
 
-export default function ArticleStrip({articles}: {articles: Article[]}) {
+export default function ArticleStrip({ articles }: { articles: Article[] }) {
   return (
     <section className="grid grid-cols-2 gap-x-[5px] gap-y-6 lg:flex lg:gap-x-[5px]">
       {articles.map((article, index) => {

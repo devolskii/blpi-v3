@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import {navLinks} from '@/data/homepage';
-import {FiChevronDown, FiMoon, FiSearch, FiUser} from 'react-icons/fi';
-import {useLocale, useTranslations} from 'next-intl';
+import { navLinks } from '@/data/homepage';
+import { FiChevronDown, FiMoon, FiSearch, FiUser } from 'react-icons/fi';
+import { useLocale, useTranslations } from 'next-intl';
 
 const outlineBtn =
   'flex h-[38px] items-center justify-center border border-black px-4 font-sans font-bold';

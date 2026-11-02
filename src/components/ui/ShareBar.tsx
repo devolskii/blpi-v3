@@ -1,7 +1,7 @@
-import {FaComment, FaFacebookF, FaRegBookmark, FaWhatsapp, FaXTwitter} from 'react-icons/fa6';
-import {FiLink} from 'react-icons/fi';
+import { FaComment, FaFacebookF, FaRegBookmark, FaWhatsapp, FaXTwitter } from 'react-icons/fa6';
+import { FiLink } from 'react-icons/fi';
 
-const icons: Record<string, React.ComponentType<{className?: string}>> = {
+const icons: Record<string, React.ComponentType<{ className?: string }>> = {
   facebook: FaFacebookF,
   x: FaXTwitter,
   whatsapp: FaWhatsapp,

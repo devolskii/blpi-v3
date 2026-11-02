@@ -1,4 +1,4 @@
-import {defineField, defineType, defineArrayMember} from 'sanity';
+import { defineField, defineType, defineArrayMember } from 'sanity';
 
 export const recentPostsType = defineType({
   type: 'document',
@@ -15,7 +15,7 @@ export const recentPostsType = defineType({
       type: 'array',
       name: 'recentPosts',
       title: 'Recent Posts',
-      of: [defineArrayMember({type: 'reference', to: [{type: 'post'}]})],
+      of: [defineArrayMember({ type: 'reference', to: [{ type: 'post' }] })],
     }),
   ],
 });

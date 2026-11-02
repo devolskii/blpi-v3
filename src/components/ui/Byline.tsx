@@ -1,4 +1,4 @@
-import type {Author} from '@/data/homepage';
+import type { Author } from '@/data/homepage';
 import Img from './Img';
 
 type BylineProps = {
@@ -8,7 +8,7 @@ type BylineProps = {
   className?: string;
 };
 
-export default function Byline({author, date, size, className = ''}: BylineProps) {
+export default function Byline({ author, date, size, className = '' }: BylineProps) {
   const avatar = size === 'lg' ? 'size-20' : 'h-11 w-10';
   return (
     <div className={`flex items-center gap-3 ${className}`}>

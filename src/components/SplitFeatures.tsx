@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import type {Article} from '@/data/homepage';
+import type { Article } from '@/data/homepage';
 import Img from './ui/Img';
 
-export default function SplitFeatures({articles}: {articles: Article[]}) {
+export default function SplitFeatures({ articles }: { articles: Article[] }) {
   return (
     <section className="grid gap-6 border-t border-[#b0aeae] pt-4 md:grid-cols-2 md:gap-0">
       {articles.map((article, index) => (

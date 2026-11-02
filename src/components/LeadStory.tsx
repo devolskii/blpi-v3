@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import type {Article, Author} from '@/data/homepage';
-import {shareActions} from '@/data/homepage';
+import type { Article, Author } from '@/data/homepage';
+import { shareActions } from '@/data/homepage';
 import Byline from './ui/Byline';
 import Highlight from './ui/Highlight';
 import Img from './ui/Img';

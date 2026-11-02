@@ -1,4 +1,4 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
 import {
   Ancizar_Serif,
   DM_Sans,
@@ -7,10 +7,10 @@ import {
   Noto_Serif_Bengali,
 } from 'next/font/google';
 import './globals.css';
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
-import {SpeedInsights} from '@vercel/speed-insights/next';
-import {Analytics} from '@vercel/analytics/next';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
 
 const enHeading = DM_Serif_Display({
   variable: '--font-en-heading',
@@ -25,7 +25,7 @@ const enSerif = Ancizar_Serif({
   adjustFontFallback: false,
 });
 
-const enSans = DM_Sans({variable: '--font-en-sans', subsets: ['latin']});
+const enSans = DM_Sans({ variable: '--font-en-sans', subsets: ['latin'] });
 
 const bnSans = Noto_Sans_Bengali({
   variable: '--font-bn-sans',
@@ -42,19 +42,19 @@ export const metadata: Metadata = {
   description: 'International Path — a revolutionary socialist publication.',
   keywords:
     'Antarjatik Path, Bolshevik, Leninist, India, Politics, BLPI, Marxism, Marxist, Journal, Theory, Articles, Communism, Trotskyism, Trotsky, Lenin, Marx, Engels, Rosa Luxemburg',
-  icons: {icon: [{url: '/favicon.ico', sizes: '48x48'}]},
+  icons: { icon: [{ url: '/favicon.ico', sizes: '48x48' }] },
 };
 
 interface LayoutProps {
   children: React.ReactNode;
-  params: Promise<{locale: string}>;
+  params: Promise<{ locale: string }>;
 }
 
-export default async function RootLayout({children, params}: LayoutProps) {
+export default async function RootLayout({ children, params }: LayoutProps) {
   // 2. Await the direct parameter map instead of utilizing global getLocale()
-  const {locale} = await params;
+  const { locale } = await params;
 
-  const messages = await getMessages({locale});
+  const messages = await getMessages({ locale });
 
   return (
     <>

@@ -1,7 +1,7 @@
-import {defineType, defineField, defineArrayMember} from 'sanity';
-import {BookIcon} from '@sanity/icons';
-import {ImageIcon} from '@sanity/icons';
-import {BlockquoteIcon} from '@sanity/icons';
+import { defineType, defineField, defineArrayMember } from 'sanity';
+import { BookIcon } from '@sanity/icons';
+import { ImageIcon } from '@sanity/icons';
+import { BlockquoteIcon } from '@sanity/icons';
 
 export const postType = defineType({
   type: 'document',
@@ -61,7 +61,7 @@ export const postType = defineType({
         defineArrayMember({
           type: 'image',
           icon: ImageIcon,
-          options: {hotspot: true}, // enables cropping/focal point
+          options: { hotspot: true }, // enables cropping/focal point
           fields: [
             {
               name: 'caption',
@@ -93,7 +93,7 @@ export const postType = defineType({
             },
           ],
           preview: {
-            select: {title: 'quote'},
+            select: { title: 'quote' },
           },
         }),
       ],
@@ -116,7 +116,7 @@ export const postType = defineType({
       type: 'array',
       name: 'topic',
       title: 'Topic',
-      of: [defineArrayMember({type: 'reference', to: [{type: 'tag'}]})],
+      of: [defineArrayMember({ type: 'reference', to: [{ type: 'tag' }] })],
     }),
   ],
 });

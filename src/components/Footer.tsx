@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {footer} from '@/data/homepage';
+import { footer } from '@/data/homepage';
 
 export default function Footer() {
   return (

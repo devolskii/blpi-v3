@@ -1,14 +1,14 @@
 import Link from 'next/link';
-import {sidebar} from '@/data/homepage';
+import { sidebar } from '@/data/homepage';
 import Byline from './ui/Byline';
 import Highlight from './ui/Highlight';
 import Img from './ui/Img';
-import {FiPlay} from 'react-icons/fi';
+import { FiPlay } from 'react-icons/fi';
 import Divider from './ui/Divider';
 
 type SidebarProps = typeof sidebar;
 
-export default function Sidebar({video, tabs, latest, quote, program, classic}: SidebarProps) {
+export default function Sidebar({ video, tabs, latest, quote, program, classic }: SidebarProps) {
   return (
     <aside className="flex min-w-0 flex-col gap-2 overflow-visible">
       <Link

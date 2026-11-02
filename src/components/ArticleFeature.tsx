@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type {Article} from '@/data/homepage';
+import type { Article } from '@/data/homepage';
 import Byline from './ui/Byline';
 import Img from './ui/Img';
 
@@ -14,7 +14,7 @@ export default function ArticleFeature({
   layout = 'stacked',
   imageClassName = 'aspect-[7/5]',
 }: ArticleFeatureProps) {
-  const {title, href, deck, image, author, date} = article;
+  const { title, href, deck, image, author, date } = article;
 
   if (layout === 'split') {
     return (

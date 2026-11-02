@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity';
+import { defineField, defineType } from 'sanity';
 
 export const heroType = defineType({
   type: 'document',
@@ -15,7 +15,7 @@ export const heroType = defineType({
       type: 'reference',
       name: 'heroPost',
       title: 'Hero Post',
-      to: [{type: 'post'}],
+      to: [{ type: 'post' }],
     }),
   ],
 });
