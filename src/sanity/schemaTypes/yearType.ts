@@ -1,4 +1,4 @@
-import {defineType, defineField, defineArrayMember} from 'sanity'
+import {defineType, defineField, defineArrayMember} from 'sanity';
 export const yearType = defineType({
   type: 'document',
   name: 'year',
@@ -23,4 +23,4 @@ export const yearType = defineType({
       of: [defineArrayMember({type: 'reference', to: [{type: 'post'}]})],
     }),
   ],
-})
+});

@@ -1,17 +1,17 @@
-import Link from 'next/link'
-import Highlight from './ui/Highlight'
-import Img from './ui/Img'
+import Link from 'next/link';
+import Highlight from './ui/Highlight';
+import Img from './ui/Img';
 
 type OverlayArticleProps = {
-  title: string
-  href: string
-  image?: string
-  deck?: string
-  titleClassName?: string
-  imageClassName?: string
-  tone?: 'light' | 'dark'
-  className?: string
-}
+  title: string;
+  href: string;
+  image?: string;
+  deck?: string;
+  titleClassName?: string;
+  imageClassName?: string;
+  tone?: 'light' | 'dark';
+  className?: string;
+};
 
 export default function OverlayArticle({
   title,
@@ -23,7 +23,7 @@ export default function OverlayArticle({
   tone = 'light',
   className = '',
 }: OverlayArticleProps) {
-  const dark = tone === 'dark'
+  const dark = tone === 'dark';
   return (
     <article className={`relative overflow-hidden ${className}`}>
       <Img src={image} alt="" className={`w-full ${imageClassName}`} />
@@ -49,5 +49,5 @@ export default function OverlayArticle({
         )}
       </div>
     </article>
-  )
+  );
 }

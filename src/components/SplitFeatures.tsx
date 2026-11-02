@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import type {Article} from '@/data/homepage'
-import Img from './ui/Img'
+import Link from 'next/link';
+import type {Article} from '@/data/homepage';
+import Img from './ui/Img';
 
 export default function SplitFeatures({articles}: {articles: Article[]}) {
   return (
@@ -17,5 +17,5 @@ export default function SplitFeatures({articles}: {articles: Article[]}) {
         </article>
       ))}
     </section>
-  )
+  );
 }

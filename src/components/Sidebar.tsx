@@ -1,12 +1,12 @@
-import Link from 'next/link'
-import {sidebar} from '@/data/homepage'
-import Byline from './ui/Byline'
-import Highlight from './ui/Highlight'
-import Img from './ui/Img'
-import {FiPlay} from 'react-icons/fi'
-import Divider from './ui/Divider'
+import Link from 'next/link';
+import {sidebar} from '@/data/homepage';
+import Byline from './ui/Byline';
+import Highlight from './ui/Highlight';
+import Img from './ui/Img';
+import {FiPlay} from 'react-icons/fi';
+import Divider from './ui/Divider';
 
-type SidebarProps = typeof sidebar
+type SidebarProps = typeof sidebar;
 
 export default function Sidebar({video, tabs, latest, quote, program, classic}: SidebarProps) {
   return (
@@ -74,5 +74,5 @@ export default function Sidebar({video, tabs, latest, quote, program, classic}: 
         </div>
       </article>
     </aside>
-  )
+  );
 }

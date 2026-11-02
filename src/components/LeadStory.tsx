@@ -1,21 +1,21 @@
-import Link from 'next/link'
-import type {Article, Author} from '@/data/homepage'
-import {shareActions} from '@/data/homepage'
-import Byline from './ui/Byline'
-import Highlight from './ui/Highlight'
-import Img from './ui/Img'
-import ShareBar from './ui/ShareBar'
+import Link from 'next/link';
+import type {Article, Author} from '@/data/homepage';
+import {shareActions} from '@/data/homepage';
+import Byline from './ui/Byline';
+import Highlight from './ui/Highlight';
+import Img from './ui/Img';
+import ShareBar from './ui/ShareBar';
 
 type LeadStoryProps = {
-  kicker: string
-  title: string
-  href: string
-  deck: string
-  image: string
-  author: Author
-  date: string
-  related: Article[]
-}
+  kicker: string;
+  title: string;
+  href: string;
+  deck: string;
+  image: string;
+  author: Author;
+  date: string;
+  related: Article[];
+};
 
 export default function LeadStory({
   kicker,
@@ -68,5 +68,5 @@ export default function LeadStory({
         </div>
       </div>
     </section>
-  )
+  );
 }

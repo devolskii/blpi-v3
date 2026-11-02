@@ -1,20 +1,20 @@
-import Link from 'next/link'
-import type {Article} from '@/data/homepage'
-import Byline from './ui/Byline'
-import Img from './ui/Img'
+import Link from 'next/link';
+import type {Article} from '@/data/homepage';
+import Byline from './ui/Byline';
+import Img from './ui/Img';
 
 type ArticleFeatureProps = {
-  article: Article
-  layout?: 'stacked' | 'split' | 'split-row'
-  imageClassName?: string
-}
+  article: Article;
+  layout?: 'stacked' | 'split' | 'split-row';
+  imageClassName?: string;
+};
 
 export default function ArticleFeature({
   article,
   layout = 'stacked',
   imageClassName = 'aspect-[7/5]',
 }: ArticleFeatureProps) {
-  const {title, href, deck, image, author, date} = article
+  const {title, href, deck, image, author, date} = article;
 
   if (layout === 'split') {
     return (
@@ -28,7 +28,7 @@ export default function ArticleFeature({
         </div>
         <Img src={image} alt="" className={`w-full ${imageClassName}`} />
       </article>
-    )
+    );
   }
 
   if (layout === 'split-row') {
@@ -49,7 +49,7 @@ export default function ArticleFeature({
           )}
         </div>
       </article>
-    )
+    );
   }
 
   return (
@@ -67,5 +67,5 @@ export default function ArticleFeature({
         )}
       </div>
     </article>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import {defineField, defineType} from 'sanity';
 
 export const heroType = defineType({
   type: 'document',
@@ -18,4 +18,4 @@ export const heroType = defineType({
       to: [{type: 'post'}],
     }),
   ],
-})
+});

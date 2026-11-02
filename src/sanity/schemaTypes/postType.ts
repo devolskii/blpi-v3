@@ -1,7 +1,7 @@
-import {defineType, defineField, defineArrayMember} from 'sanity'
-import {BookIcon} from '@sanity/icons'
-import {ImageIcon} from '@sanity/icons'
-import {BlockquoteIcon} from '@sanity/icons'
+import {defineType, defineField, defineArrayMember} from 'sanity';
+import {BookIcon} from '@sanity/icons';
+import {ImageIcon} from '@sanity/icons';
+import {BlockquoteIcon} from '@sanity/icons';
 
 export const postType = defineType({
   type: 'document',
@@ -119,4 +119,4 @@ export const postType = defineType({
       of: [defineArrayMember({type: 'reference', to: [{type: 'tag'}]})],
     }),
   ],
-})
+});

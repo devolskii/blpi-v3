@@ -9,7 +9,6 @@ import {
 import './globals.css'
 import {NextIntlClientProvider} from 'next-intl'
 import {getMessages} from 'next-intl/server'
-import {notFound} from 'next/navigation'
 
 const enHeading = DM_Serif_Display({
   variable: '--font-en-heading',

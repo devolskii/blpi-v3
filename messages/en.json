@@ -10,7 +10,8 @@
     "pdf": "PDF",
     "archive": "Archive",
     "all": "All",
-    "sections": {
+    "sections": "SECTIONS",
+    "sections_list": {
       "frontpage": "Front Page",
       "politics": "Politics",
       "economics": "Economics",

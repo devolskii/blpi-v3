@@ -1,18 +1,18 @@
-const img = (name: string) => encodeURI(`/images/${name}`)
+const img = (name: string) => encodeURI(`/images/${name}`);
 
 export type Author = {
-  name: string
-  avatar?: string
-}
+  name: string;
+  avatar?: string;
+};
 
 export type Article = {
-  title: string
-  href: string
-  image?: string
-  deck?: string
-  author?: Author
-  date?: string
-}
+  title: string;
+  href: string;
+  image?: string;
+  deck?: string;
+  author?: Author;
+  date?: string;
+};
 
 export const navLinks = [
   {label: 'world', href: '#'},
@@ -24,15 +24,15 @@ export const navLinks = [
   {label: 'pdf', href: '#'},
   {label: 'archive', href: '#'},
   {label: 'all', href: '#', muted: true},
-]
+];
 
-export const shareActions = ['facebook', 'x', 'whatsapp', 'link', 'comments', 'bookmark'] as const
+export const shareActions = ['facebook', 'x', 'whatsapp', 'link', 'comments', 'bookmark'] as const;
 
 const authors = {
   mohon: {name: 'Mohon Sharif', avatar: img('Mohon Sharif.png')},
   bhaskar: {name: 'Bhaskar Ganguly', avatar: img('Bhaskar Ganguly.png')},
   trotsky: {name: 'Leon Trotsky', avatar: img('Leon Trotsky.png')},
-} satisfies Record<string, Author>
+} satisfies Record<string, Author>;
 
 export const leadStory = {
   kicker: 'Statement / Kolkata',
@@ -59,7 +59,7 @@ export const leadStory = {
       image: img('Subhash Chandra Bose.png'),
     },
   ],
-}
+};
 
 export const sidebar = {
   video: {
@@ -121,7 +121,7 @@ export const sidebar = {
     author: authors.trotsky,
     date: 'March 24, 1939',
   },
-}
+};
 
 export const leftColumn = {
   campaigns: [
@@ -150,7 +150,7 @@ export const leftColumn = {
     href: '#',
     image: img('Worldwide Socialism.png'),
   },
-}
+};
 
 export const centerColumn = {
   gramsci: {
@@ -190,14 +190,14 @@ export const centerColumn = {
     href: '#',
     image: img('United Front Rally.png'),
   },
-}
+};
 
 export const featureBanner = {
   title: 'Nepal — Which Way Forward?',
   href: '#',
   deck: 'Class Dynamics, Political Degeneration, and the Search for a Genuine Revolutionary Path',
   image: img('Nepal Protest.png'),
-}
+};
 
 export const articleRow: Article[] = [
   {
@@ -222,7 +222,7 @@ export const articleRow: Article[] = [
     href: '#book-fair-attack',
     image: img('Publisher Attack.png'),
   },
-]
+];
 
 export const splitFeatures: Article[] = [
   {
@@ -236,7 +236,7 @@ export const splitFeatures: Article[] = [
     href: '#party-and-ycl',
     image: img('Communist Party & YCL.png'),
   },
-]
+];
 
 export const footer = {
   newsletterPlaceholder: 'Email address for mailing',
@@ -264,4 +264,4 @@ export const footer = {
   copyright: '© 2026 Naya Antarjatik Prakashani',
   legal: ['Contact Us', 'Work With Us', 'Privacy', 'Sitemap', 'Help', 'Site feedback'],
   credit: 'Made With ♥ by @devadvist',
-}
+};

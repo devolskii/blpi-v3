@@ -10,7 +10,8 @@
     "pdf": "পিডিএফ",
     "archive": "আর্কাইভ",
     "all": "সব",
-    "sections": {
+    "sections": "বিভাগ",
+    "sections_list": {
       "frontpage": "প্রথম পাতা",
       "politics": "রাজনীতি",
       "economics": "অর্থনীতি",

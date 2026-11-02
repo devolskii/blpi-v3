@@ -1,13 +1,13 @@
-import Link from 'next/link'
-import Highlight from './ui/Highlight'
-import Img from './ui/Img'
+import Link from 'next/link';
+import Highlight from './ui/Highlight';
+import Img from './ui/Img';
 
 type FeatureBannerProps = {
-  title: string
-  href: string
-  deck: string
-  image: string
-}
+  title: string;
+  href: string;
+  deck: string;
+  image: string;
+};
 
 export default function FeatureBanner({title, href, deck, image}: FeatureBannerProps) {
   return (
@@ -24,5 +24,5 @@ export default function FeatureBanner({title, href, deck, image}: FeatureBannerP
         </p>
       </div>
     </section>
-  )
+  );
 }

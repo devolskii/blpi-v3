@@ -3,5 +3,5 @@ export default function StudioLayout({children}: {children: React.ReactNode}) {
     <html lang="en">
       <body>{children}</body>
     </html>
-  )
+  );
 }

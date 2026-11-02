@@ -1,4 +1,4 @@
-import {defineType, defineField, defineArrayMember} from 'sanity'
+import {defineType, defineField, defineArrayMember} from 'sanity';
 export const tagType = defineType({
   type: 'document',
   name: 'tag',
@@ -23,4 +23,4 @@ export const tagType = defineType({
       of: [defineArrayMember({type: 'reference', to: [{type: 'post'}]})],
     }),
   ],
-})
+});

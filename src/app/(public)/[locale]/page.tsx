@@ -1,14 +1,14 @@
-import ArticleFeature from '@/components/ArticleFeature'
-import ArticleStrip from '@/components/ArticleStrip'
-import CampaignCard from '@/components/CampaignCard'
-import FeatureBanner from '@/components/FeatureBanner'
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
-import LeadStory from '@/components/LeadStory'
-import OverlayArticle from '@/components/OverlayArticle'
-import Sidebar from '@/components/Sidebar'
-import SplitFeatures from '@/components/SplitFeatures'
-import Divider from '@/components/ui/Divider'
+import ArticleFeature from '@/components/ArticleFeature';
+import ArticleStrip from '@/components/ArticleStrip';
+import CampaignCard from '@/components/CampaignCard';
+import FeatureBanner from '@/components/FeatureBanner';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import LeadStory from '@/components/LeadStory';
+import OverlayArticle from '@/components/OverlayArticle';
+import Sidebar from '@/components/Sidebar';
+import SplitFeatures from '@/components/SplitFeatures';
+import Divider from '@/components/ui/Divider';
 import {
   articleRow,
   centerColumn,
@@ -17,10 +17,10 @@ import {
   leftColumn,
   sidebar,
   splitFeatures,
-} from '@/data/homepage'
+} from '@/data/homepage';
 
 export default function Home() {
-  const [recruit, subscribe] = leftColumn.campaigns
+  const [recruit, subscribe] = leftColumn.campaigns;
 
   return (
     <>
@@ -98,5 +98,5 @@ export default function Home() {
       </main>
       <Footer />
     </>
-  )
+  );
 }

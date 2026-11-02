@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import {footer} from '@/data/homepage'
+import Link from 'next/link';
+import {footer} from '@/data/homepage';
 
 export default function Footer() {
   return (
@@ -62,5 +62,5 @@ export default function Footer() {
         <span>{footer.credit}</span>
       </div>
     </footer>
-  )
+  );
 }

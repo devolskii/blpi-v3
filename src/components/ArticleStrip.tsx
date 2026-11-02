@@ -1,8 +1,8 @@
-import {Fragment} from 'react'
-import Link from 'next/link'
-import type {Article} from '@/data/homepage'
-import Divider from './ui/Divider'
-import Img from './ui/Img'
+import {Fragment} from 'react';
+import Link from 'next/link';
+import type {Article} from '@/data/homepage';
+import Divider from './ui/Divider';
+import Img from './ui/Img';
 
 export default function ArticleStrip({articles}: {articles: Article[]}) {
   return (
@@ -13,7 +13,7 @@ export default function ArticleStrip({articles}: {articles: Article[]}) {
             ? 'text-3xl'
             : article.title.length < 85
               ? 'text-2xl'
-              : 'text-xl'
+              : 'text-xl';
         return (
           <Fragment key={article.href}>
             {index > 0 && <Divider vertical className="hidden lg:block" />}
@@ -24,8 +24,8 @@ export default function ArticleStrip({articles}: {articles: Article[]}) {
               </h3>
             </article>
           </Fragment>
-        )
+        );
       })}
     </section>
-  )
+  );
 }

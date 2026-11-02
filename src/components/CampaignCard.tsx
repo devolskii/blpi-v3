@@ -1,13 +1,13 @@
-import Link from 'next/link'
-import Img from './ui/Img'
+import Link from 'next/link';
+import Img from './ui/Img';
 
 type CampaignCardProps = {
-  title: string
-  href: string
-  image: string
-  ctaLabel: string
-  imageClassName?: string
-}
+  title: string;
+  href: string;
+  image: string;
+  ctaLabel: string;
+  imageClassName?: string;
+};
 
 export default function CampaignCard({
   title,
@@ -27,5 +27,5 @@ export default function CampaignCard({
         {ctaLabel}
       </Link>
     </article>
-  )
+  );
 }

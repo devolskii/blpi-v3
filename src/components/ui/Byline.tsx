@@ -1,15 +1,15 @@
-import type {Author} from '@/data/homepage'
-import Img from './Img'
+import type {Author} from '@/data/homepage';
+import Img from './Img';
 
 type BylineProps = {
-  author: Author
-  date?: string
-  size?: 'sm' | 'lg'
-  className?: string
-}
+  author: Author;
+  date?: string;
+  size?: 'sm' | 'lg';
+  className?: string;
+};
 
 export default function Byline({author, date, size, className = ''}: BylineProps) {
-  const avatar = size === 'lg' ? 'size-20' : 'h-11 w-10'
+  const avatar = size === 'lg' ? 'size-20' : 'h-11 w-10';
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       {author.avatar && (
@@ -22,5 +22,5 @@ export default function Byline({author, date, size, className = ''}: BylineProps
         {date && <div className={size === 'lg' ? 'text-sm' : 'text-[11px]'}>{date}</div>}
       </div>
     </div>
-  )
+  );
 }
