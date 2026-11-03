@@ -43,6 +43,22 @@ export const metadata: Metadata = {
   keywords:
     'Antarjatik Path, Bolshevik, Leninist, India, Politics, BLPI, Marxism, Marxist, Journal, Theory, Articles, Communism, Trotskyism, Trotsky, Lenin, Marx, Engels, Rosa Luxemburg',
   icons: { icon: [{ url: '/favicon.ico', sizes: '48x48' }] },
+  openGraph: {
+    title: 'International Path',
+    description: 'International Path — a revolutionary socialist publication.',
+    url: 'https://blpi.vercel.app', //
+    siteName: 'International Path',
+    images: [
+      {
+        url: 'https://blpi.vercel.app/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'International Path - Revolutionary Socialist Publication',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 interface LayoutProps {
