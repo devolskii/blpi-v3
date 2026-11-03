@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: 'International Path',
     images: [
       {
-        url: 'https://blpi.vercel.app/og-image.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'International Path - Revolutionary Socialist Publication',
