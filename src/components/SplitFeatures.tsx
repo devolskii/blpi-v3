@@ -4,11 +4,11 @@ import Img from './ui/Img';
 
 export default function SplitFeatures({ articles }: { articles: Article[] }) {
   return (
-    <section className="grid gap-6 border-t border-[#b0aeae] pt-4 md:grid-cols-2 md:gap-0">
+    <section className="grid gap-6 border-t border-divider pt-4 md:grid-cols-2 md:gap-0">
       {articles.map((article, index) => (
         <article
           key={article.href}
-          className={`grid grid-cols-[1fr_1.4fr] items-center gap-4 ${index > 0 ? 'md:border-l md:border-[#b0aeae] md:pl-4' : 'md:pr-4'}`}
+          className={`grid grid-cols-[1fr_1.4fr] items-center gap-4 ${index > 0 ? 'md:border-l md:border-divider md:pl-4' : 'md:pr-4'}`}
         >
           <Img src={article.image} alt="" className="aspect-[4/3] w-full" />
           <h3 className="font-heading text-[30px] leading-tight">

@@ -25,8 +25,8 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="mx-auto flex w-full max-w-[1620px] flex-col gap-8 px-5 pb-8 pt-6 md:gap-6 md:px-8 md:py-5 2xl:px-0">
-        <div className="flex flex-col gap-6 md:grid md:gap-x-5 md:gap-y-4 md:grid-cols-[minmax(0,0.78fr)_minmax(0,1.57fr)_minmax(0,1fr)] md:grid-rows-[minmax(0,1fr)_minmax(0,5fr)] lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)_minmax(0,1fr)] lg:gap-x-7.5">
+      <main className="mx-auto flex w-full max-w-[1620px] flex-col gap-8 px-5 pb-8 pt-6 md:gap-6 md:px-15 md:py-5 2xl:px-0">
+        <div className="flex flex-col gap-6 md:grid md:gap-x-5 md:gap-y-4 md:grid-cols-[minmax(0,0.78fr)_minmax(0,1.57fr)_minmax(0,1fr)] md:grid-rows-[minmax(0,0.65fr)_minmax(0,3fr)] lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)_minmax(0,1fr)] lg:grid-rows-[minmax(0,0.94fr)_minmax(0,3fr)] lg:gap-x-7.5">
           <div className="order-1 md:order-none md:col-span-2">
             <LeadStory {...leadStory} />
             <Divider className="mt-3 max-md:hidden" />
@@ -47,18 +47,17 @@ export default function Home() {
             <Divider className="my-3 max-md:order-13 max-md:my-0" />
             <OverlayArticle
               {...leftColumn.studentPolitics}
-              titleClassName="md:text-[21px] lg:text-[26px]"
+              titleClassName="md:text-[15px] lg:text-[26px]"
               className="pt-2 max-md:order-14 max-md:pt-0"
             />
             <Divider className="my-3 max-md:order-15 max-md:my-0" />
             <OverlayArticle
               {...leftColumn.worldwideSocialism}
               tone="dark"
-              imageClassName="aspect-[5/7] md:aspect-[218/426] lg:aspect-[2/2.12]"
-              titleClassName="md:text-xl lg:text-[29px]"
+              imageClassName="aspect-[5/7] md:aspect-[2/5] lg:aspect-[2/3]"
+              titleClassName="md:mx-2 md:text-lg lg:text-[29px]"
               className="max-md:order-16"
             />
-            <Divider className="my-3 max-md:order-17 max-md:my-0 md:hidden" />
           </div>
 
           <div className="relative flex min-w-0 flex-col gap-2 max-md:contents md:before:absolute md:before:inset-y-0 md:before:-left-2.5 md:before:w-px md:before:bg-rule lg:before:-left-[15px]">
@@ -71,8 +70,8 @@ export default function Home() {
             <Divider className="my-3 max-md:order-3 max-md:my-0" />
             <ArticleFeature
               article={centerColumn.electionBulletin}
-              layout="split"
-              imageClassName="aspect-[133/93]"
+              layout="split-row"
+              imageClassName="aspect-[5/2]"
               className="max-md:order-4"
             />
             <Divider className="my-3 max-md:order-5 max-md:my-0" />

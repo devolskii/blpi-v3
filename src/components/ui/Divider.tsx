@@ -8,7 +8,7 @@ export default function Divider({
   return (
     <div
       aria-hidden
-      className={`bg-[#b0aeae] ${vertical ? 'w-px self-stretch' : 'h-px w-full'} ${className}`}
+      className={`bg-divider ${vertical ? 'w-px self-stretch' : 'h-px w-full'} ${className}`}
     />
   );
 }

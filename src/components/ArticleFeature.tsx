@@ -20,9 +20,8 @@ export default function ArticleFeature({
 
   if (layout === 'split') {
     return (
-      <article
-        className={`flex flex-col-reverse gap-3 md:gap-2.5 lg:grid lg:grid-cols-[208px_1fr] lg:items-center ${className}`}
-      >
+      <article className={`flex flex-col gap-3 ${className}`}>
+        <Img src={image} alt="" className={`w-full ${imageClassName}`} />
         <div className="flex flex-col gap-3 md:gap-0">
           <h3 className="font-heading text-[28px] leading-[1.14] md:text-[22px] md:leading-tight lg:text-[31px]">
             <Link href={href}>{title}</Link>
@@ -32,9 +31,15 @@ export default function ArticleFeature({
               {deck}
             </p>
           )}
-          {author && <Byline author={author} date={date} size="lg" className="md:mt-3 lg:mt-4" />}
+          {author && (
+            <Byline
+              author={author}
+              date={date}
+              size="lg"
+              className="md:row-span-2 md:mt-3 lg:mt-4"
+            />
+          )}
         </div>
-        <Img src={image} alt="" className={`w-full ${imageClassName}`} />
       </article>
     );
   }
@@ -43,22 +48,26 @@ export default function ArticleFeature({
     return (
       <article className={`flex flex-col gap-3 md:gap-2.5 ${className}`}>
         <Img src={image} alt="" className={`w-full ${imageClassName}`} />
-        <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-          <div className="flex flex-col gap-3 md:block">
-            <h3 className="font-heading text-[28px] leading-[1.14] md:text-[22px] md:leading-tight lg:text-[31px]">
-              <Link href={href}>{title}</Link>
-            </h3>
-            {deck && (
-              <p className="font-serif text-[19px] italic leading-[1.35] md:mt-2 md:text-sm md:not-italic md:leading-snug lg:text-[17px]">
-                {deck}
-              </p>
-            )}
-          </div>
-          {author && (
-            <div className="flex shrink-0 md:justify-end">
-              <Byline author={author} date={date} size="lg" />
+        <div className="flex flex-col gap-3">
+          <h3 className="font-heading text-[28px] leading-[1.14] md:text-[30px] md:leading-tight lg:text-[35px]">
+            <Link href={href}>{title}</Link>
+          </h3>
+          <div className="flex gap-3">
+            <div className="grow-10">
+              {deck && (
+                <p className="font-serif text-[19px] italic leading-[1.35] md:mt-2 md:text-lg md:not-italic md:leading-snug lg:text-2xl">
+                  {deck}
+                </p>
+              )}
             </div>
-          )}
+            <div className="grow-1">
+              {author && (
+                <div className="flex md:justify-end">
+                  <Byline author={author} date={date} size="sm" />
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </article>
     );
@@ -74,7 +83,7 @@ export default function ArticleFeature({
           <Link href={href}>{title}</Link>
         </h3>
         {deck && (
-          <p className="font-serif text-[19px] italic leading-[1.35] md:mt-2 md:text-xs md:not-italic md:leading-snug lg:text-[17px]">
+          <p className="font-serif text-[19px] italic leading-[1.35] md:mt-2 md:text-lg md:not-italic md:leading-snug lg:text-2xl">
             {deck}
           </p>
         )}

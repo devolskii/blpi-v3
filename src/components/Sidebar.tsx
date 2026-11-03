@@ -13,7 +13,7 @@ export default function Sidebar({ video, tabs, latest, quote, program, classic }
     <aside className="flex min-w-0 flex-col gap-4 overflow-visible md:gap-2">
       <Link
         href={video.href}
-        className="relative block aspect-[458/262] overflow-hidden md:mb-3 lg:-mr-15"
+        className="relative block aspect-[458/262] overflow-hidden md:mb-3 md:-mr-5 lg:-mr-15"
       >
         <Img src={video.image} alt={video.title} className="absolute inset-0 size-full" />
         <FiPlay
@@ -42,7 +42,7 @@ export default function Sidebar({ video, tabs, latest, quote, program, classic }
             >
               <Link
                 href={item.href}
-                className="flex-1 font-heading text-[17px] leading-[1.3] md:font-serif md:text-sm lg:text-[15px] lg:leading-snug"
+                className="flex-1 font-heading text-[17px] leading-[1.3] md:text-[10px] md:text-xs lg:text-lg lg:leading-snug"
               >
                 {item.title}
               </Link>
@@ -56,10 +56,10 @@ export default function Sidebar({ video, tabs, latest, quote, program, classic }
         </ul>
       </div>
       <Divider className="my-3 max-md:my-0" />
-      <blockquote className="py-4 text-center font-serif italic">
+      <blockquote className="mb-2 text-center font-serif italic">
         <p className="text-lg leading-snug lg:text-3xl">{quote.text}</p>
         <footer className="mt-4 text-base text-subtle">
-          <cite className="text-sm lg:text-2xl">— {quote.attribution}</cite>
+          <cite className="text-xs lg:text-2xl">— {quote.attribution}</cite>
           <div className="text-xs not-italic lg:text-xl">({quote.date})</div>
         </footer>
       </blockquote>
@@ -67,7 +67,7 @@ export default function Sidebar({ video, tabs, latest, quote, program, classic }
         <Img src={quote.image} alt="" className="w-full" />
       </Link>
       <Divider className="my-3" />
-      <Link href={program.href} className="block overflow-hidden lg:-mr-15">
+      <Link href={program.href} className="block overflow-hidden md:-mr-5 lg:-mr-15">
         <Img src={program.image} alt="" className="w-full max-w-full !object-contain" />
         <h3 className="mt-2 font-heading text-xl lg:mr-15 lg:text-3xl">{program.title}</h3>
       </Link>

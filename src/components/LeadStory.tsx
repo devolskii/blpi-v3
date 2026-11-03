@@ -35,7 +35,7 @@ export default function LeadStory({
           <p className="font-sans text-[13px] text-muted md:text-foreground lg:text-base">
             {kicker}
           </p>
-          <h2 className="mt-4 font-heading text-[36px] leading-[1.14] md:mt-0 md:text-[30px] md:leading-[1.35] lg:text-[36px] lg:leading-[1.49]">
+          <h2 className="mt-4 font-heading text-[36px] leading-[1.14] md:mt-0 md:text-[25px] md:leading-[1.35] lg:text-[36px] lg:leading-[1.49]">
             <Link href={href}>
               <Highlight className="bg-background">{title}</Highlight>
             </Link>

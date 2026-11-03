@@ -14,7 +14,7 @@ export default function Header() {
   const t = useTranslations('nav');
   const locale = useLocale();
   return (
-    <header className="mx-auto w-full max-w-[1620px] bg-background md:px-8 md:pt-5 lg:pt-3 2xl:px-0">
+    <header className="mx-auto w-full max-w-[1620px] bg-background md:px-15 md:pt-5 lg:pt-3 2xl:px-0">
       <MobileMasthead
         title={t('title')}
         latestLabel={t('latest')}
@@ -24,7 +24,7 @@ export default function Header() {
         switchLocaleHref={locale === 'en' ? '/bn' : '/en'}
       />
 
-      <div className="hidden grid-cols-[1fr_auto_1fr] items-center gap-3 md:grid">
+      <div className="hidden items-center gap-3 md:flex">
         <div className="flex items-center gap-2">
           <button
             type="button"
@@ -41,13 +41,14 @@ export default function Header() {
             <FiSearch className="size-5 lg:size-6" />
           </button>
         </div>
-
-        <Link
-          href="/"
-          className="text-center font-heading text-[42px] leading-none text-foreground lg:text-[66px]"
-        >
-          {t('title')}
-        </Link>
+        <div className="grow text-center">
+          <Link
+            href="/"
+            className="font-heading text-[42px] leading-none text-foreground lg:text-[66px]"
+          >
+            {t('title')}
+          </Link>
+        </div>
 
         <div className="flex items-center justify-between gap-4 lg:gap-6">
           <button type="button" className={`${outlineBtn} text-xs lg:w-[185px] lg:text-[22px]`}>

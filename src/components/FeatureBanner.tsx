@@ -16,11 +16,11 @@ export default function FeatureBanner({ title, href, deck, image }: FeatureBanne
       <div className="relative flex flex-col items-start gap-6 pt-10">
         <h2 className="font-heading text-[40px] leading-tight md:text-[86px]">
           <Link href={href}>
-            <Highlight className="bg-white">{title}</Highlight>
+            <Highlight className="bg-highlight">{title}</Highlight>
           </Link>
         </h2>
         <p className="max-w-[833px] font-heading text-xl leading-tight md:text-[31px]">
-          <Highlight className="bg-white">{deck}</Highlight>
+          <Highlight className="bg-highlight">{deck}</Highlight>
         </p>
       </div>
     </section>

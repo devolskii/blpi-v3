@@ -66,6 +66,11 @@ export default async function RootLayout({ children, params }: LayoutProps) {
         <head>
           <meta charSet="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark')}catch(e){}`,
+            }}
+          />
         </head>
         <body suppressHydrationWarning>
           <NextIntlClientProvider locale={locale} messages={messages}>
