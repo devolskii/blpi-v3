@@ -28,25 +28,33 @@ export default function OverlayArticle({
     <article className={`relative overflow-hidden ${className}`}>
       <Img src={image} alt="" className={`w-full ${imageClassName}`} />
       <div
-        className={`absolute inset-0 flex flex-col px-0 ${dark ? 'justify-center items-center text-center text-white' : 'items-start'}`}
+        className={`flex flex-col md:absolute md:inset-0 md:px-0 ${
+          dark
+            ? 'absolute inset-0 items-center justify-end p-6 text-center text-white md:justify-center md:p-0'
+            : 'items-start pt-3 md:pt-0'
+        }`}
       >
-        <h3 className={`font-heading leading-[1.48] max-w-full ${titleClassName}`}>
-          <Link href={href}>
-            {dark ? (
-              <Highlight className="bg-black/60">{title}</Highlight>
-            ) : (
-              <Highlight className="bg-white">{title}</Highlight>
-            )}
-          </Link>
-        </h3>
-
-        {deck && (
-          <p
-            className={`mt-4 px-2 font-serif text-[17px] leading-snug whitespace-pre-line max-w-full wrap-break-word ${dark ? 'text-white bg-black/60' : 'text-gray-600'}`}
+        <div className={dark ? 'flex flex-col items-center gap-6 bg-black/50 p-3 md:contents' : ''}>
+          <h3
+            className={`max-w-full font-heading text-[28px] leading-[1.18] md:leading-[1.48] ${titleClassName}`}
           >
-            {deck}
-          </p>
-        )}
+            <Link href={href}>
+              {dark ? (
+                <Highlight className="max-md:bg-transparent bg-black/60">{title}</Highlight>
+              ) : (
+                <Highlight className="bg-background max-md:p-0">{title}</Highlight>
+              )}
+            </Link>
+          </h3>
+
+          {deck && (
+            <p
+              className={`max-w-full whitespace-pre-line font-serif text-lg leading-[1.35] wrap-break-word md:mt-3 md:px-2 md:text-[13px] md:leading-snug lg:mt-4 lg:text-[17px] ${dark ? 'bg-black/60 text-[#d1d5db] max-md:bg-transparent md:text-white' : 'text-subtle'}`}
+            >
+              {deck}
+            </p>
+          )}
+        </div>
       </div>
     </article>
   );

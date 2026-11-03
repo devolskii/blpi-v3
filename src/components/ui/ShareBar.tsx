@@ -23,8 +23,13 @@ export default function ShareBar({
         const Icon = icons[name];
         if (!Icon) return null;
         return (
-          <button key={name} type="button" aria-label={name} className="size-4 cursor-pointer">
-            <Icon className="size-full" />
+          <button
+            key={name}
+            type="button"
+            aria-label={name}
+            className="flex size-11 cursor-pointer items-center justify-center md:size-4"
+          >
+            <Icon className="size-5 md:size-full" />
           </button>
         );
       })}

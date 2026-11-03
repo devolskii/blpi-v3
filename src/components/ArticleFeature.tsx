@@ -7,24 +7,32 @@ type ArticleFeatureProps = {
   article: Article;
   layout?: 'stacked' | 'split' | 'split-row';
   imageClassName?: string;
+  className?: string;
 };
 
 export default function ArticleFeature({
   article,
   layout = 'stacked',
   imageClassName = 'aspect-[7/5]',
+  className = '',
 }: ArticleFeatureProps) {
   const { title, href, deck, image, author, date } = article;
 
   if (layout === 'split') {
     return (
-      <article className="grid items-center gap-2.5 md:grid-cols-[208px_1fr]">
-        <div className="flex flex-col">
-          <h3 className="font-heading text-[31px] leading-tight">
+      <article
+        className={`flex flex-col-reverse gap-3 md:gap-2.5 lg:grid lg:grid-cols-[208px_1fr] lg:items-center ${className}`}
+      >
+        <div className="flex flex-col gap-3 md:gap-0">
+          <h3 className="font-heading text-[28px] leading-[1.14] md:text-[22px] md:leading-tight lg:text-[31px]">
             <Link href={href}>{title}</Link>
           </h3>
-          {deck && <p className="mt-3 font-serif text-lg leading-snug">{deck}</p>}
-          {author && <Byline author={author} date={date} size="lg" className="mt-4" />}
+          {deck && (
+            <p className="font-serif text-[19px] italic leading-[1.35] md:mt-2 md:text-sm md:not-italic md:leading-snug lg:mt-3 lg:text-lg">
+              {deck}
+            </p>
+          )}
+          {author && <Byline author={author} date={date} size="lg" className="md:mt-3 lg:mt-4" />}
         </div>
         <Img src={image} alt="" className={`w-full ${imageClassName}`} />
       </article>
@@ -33,17 +41,21 @@ export default function ArticleFeature({
 
   if (layout === 'split-row') {
     return (
-      <article className="flex flex-col gap-2.5">
+      <article className={`flex flex-col gap-3 md:gap-2.5 ${className}`}>
         <Img src={image} alt="" className={`w-full ${imageClassName}`} />
-        <div className="flex">
-          <div>
-            <h3 className="font-heading text-[31px] leading-tight">
+        <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+          <div className="flex flex-col gap-3 md:block">
+            <h3 className="font-heading text-[28px] leading-[1.14] md:text-[22px] md:leading-tight lg:text-[31px]">
               <Link href={href}>{title}</Link>
             </h3>
-            {deck && <p className="mt-2 font-serif text-[17px] leading-snug">{deck}</p>}
+            {deck && (
+              <p className="font-serif text-[19px] italic leading-[1.35] md:mt-2 md:text-sm md:not-italic md:leading-snug lg:text-[17px]">
+                {deck}
+              </p>
+            )}
           </div>
           {author && (
-            <div className="flex justify-end">
+            <div className="flex shrink-0 md:justify-end">
               <Byline author={author} date={date} size="lg" />
             </div>
           )}
@@ -53,15 +65,21 @@ export default function ArticleFeature({
   }
 
   return (
-    <article className="flex h-full flex-col gap-2.5 justify-between my-auto">
-      <Img src={image} alt="" className={`w-full ${imageClassName}`} />
-      <div className="flex flex-1 flex-col justify-around items-center text-center">
-        <h3 className="font-heading text-[31px] leading-tight">
+    <article
+      className={`flex h-full flex-col gap-3 md:my-auto md:justify-between md:gap-2.5 ${className}`}
+    >
+      <Img src={image} alt="" className={`w-full ${imageClassName} max-md:aspect-[7/4]`} />
+      <div className="flex flex-1 flex-col gap-3 md:items-center md:justify-around md:gap-0 md:text-center">
+        <h3 className="font-heading text-[28px] leading-[1.14] md:text-[19px] md:leading-tight lg:text-[31px]">
           <Link href={href}>{title}</Link>
         </h3>
-        {deck && <p className="mt-2 font-serif text-[17px] leading-snug">{deck}</p>}
+        {deck && (
+          <p className="font-serif text-[19px] italic leading-[1.35] md:mt-2 md:text-xs md:not-italic md:leading-snug lg:text-[17px]">
+            {deck}
+          </p>
+        )}
         {author && (
-          <div className="mt-3 flex justify-end">
+          <div className="flex md:mt-3 md:justify-end">
             <Byline author={author} date={date} size="sm" />
           </div>
         )}

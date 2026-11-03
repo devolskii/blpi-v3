@@ -7,5 +7,5 @@ export default function Highlight({
   children: ReactNode;
   className?: string;
 }) {
-  return <span className={`box-decoration-clone px-1 py-0.5 ${className}`}>{children}</span>;
+  return <span className={`box-decoration-clone py-0.5 ${className}`}>{children}</span>;
 }
